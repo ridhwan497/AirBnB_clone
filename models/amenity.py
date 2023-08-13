@@ -1,9 +1,14 @@
 #!/usr/bin/python3
-"""Module for Amenity class."""
-
+'''class inherent of BaseModel'''
 from models.base_model import BaseModel
 
 
 class Amenity(BaseModel):
-    """Class representing a Amenity."""
+    '''class amenity'''
+
     name = ""
+
+    def __init__(self, *args, **kwargs):
+        """initializes Amenity"""
+        super().__init__(*args, **kwargs)
+

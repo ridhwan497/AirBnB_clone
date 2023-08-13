@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-"""Module for User class."""
+'''A class user that inherent from BaseModel'''
 from models.base_model import BaseModel
 
 
 class User(BaseModel):
-    """Class representing a User."""
+    '''represent a class User'''
+
     email = ""
     password = ""
     first_name = ""
     last_name = ""
+
