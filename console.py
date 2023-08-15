@@ -91,7 +91,7 @@ class HBNBCommand(cmd.Cmd):
         if len(argl) == 0:
             print("** class name missing **")
         elif argl[0] not in HBNBCommand.__classes:
-            print("** class name missing **")
+            print("** class doesn't exist **")
         else:
             print(eval(argl[0])().id)
             storage.save()
@@ -105,7 +105,7 @@ class HBNBCommand(cmd.Cmd):
         if len(argl) == 0:
             print("** class name missing **")
         elif argl[0] not in HBNBCommand.__classes:
-            print("** class name missing **")
+            print("** class doesn't exist **")
         elif len(argl) == 1:
             print("** instance id missing **")
         elif "{}.{}".format(argl[0], argl[1]) not in objdict:
@@ -121,7 +121,7 @@ class HBNBCommand(cmd.Cmd):
         if len(argl) == 0:
             print("** class name missing **")
         elif argl[0] not in HBNBCommand.__classes:
-            print("** class name missing **")
+            print("** class doesn't exist **")
         elif len(argl) == 1:
             print("** instance id missing **")
         elif "{}.{}".format(argl[0], argl[1]) not in objdict.keys():
@@ -136,7 +136,7 @@ class HBNBCommand(cmd.Cmd):
         If no class is specified, displays all instantiated objects."""
         argl = parse(arg)
         if len(argl) > 0 and argl[0] not in HBNBCommand.__classes:
-            print("** class name missing **")
+            print("** class doesn't exist **")
         else:
             objl = []
             for obj in storage.all().values():
@@ -169,7 +169,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
             return False
         if argl[0] not in HBNBCommand.__classes:
-            print("** class name missing **")
+            print("** class doesn't exist **")
             return False
         if len(argl) == 1:
             print("** instance id missing **")
